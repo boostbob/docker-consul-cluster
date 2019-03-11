@@ -1,3 +1,8 @@
+docker network create --subnet=172.10.0.0/16 mynetwork
+docker network ls
+
+// 用Dockerfile构建centos:consul-1.4.3
+
 // 创建5个容器(name和ip对应，从2开始)
 docker run -itd --name test2 --network mynetwork -P --ip 172.10.0.2 --rm centos:consul-1.4.3
 docker run -itd --name test3 --network mynetwork --ip 172.10.0.3 --rm centos:consul-1.4.3
